@@ -73,22 +73,55 @@ namespace HelloWorldBasicCSharpReview
             */
 
             //Example of a try Catch Block to find handle exception
-           
-            try
-            {
-                var number = "1234";
-                byte b = Convert.ToByte(number);
-                Console.WriteLine(b);
+            /*
+             try
+             {
+                 var number = "1234";
+                 byte b = Convert.ToByte(number);
+                 Console.WriteLine(b);
 
-            }
-            catch(Exception)
-            {
-                Console.WriteLine("the number could not be converted to a byte.");
-                
-            }
+             }
+             catch(Exception)
+             {
+                 Console.WriteLine("the number could not be converted to a byte.");
+
+             }
+            */
+
+            var a = 1;
+            var b = 2;
+            var c = 3;
+            
+            //These are arithmetic operators like you would see in a math equation 
+            
+            Console.WriteLine(a + b);
+            Console.WriteLine(a / b);
+            Console.WriteLine((float)a + (float)b);
+            Console.WriteLine(a + b);
+            
+            // C# has the same order of operations as mathematical equations
+            
+            Console.WriteLine(a + b * c);
+            
+            // These are comparison operators. The result is either true or false
+            Console.WriteLine(a > b);
+            Console.WriteLine(a == b);
+            Console.WriteLine(a != b);
+            //This is possible but it is poor coding because it is confusing instead of a double negative you should use a positive to get the same result
+            Console.WriteLine(!(a != b));
+
+            //These are Logical Operators
+
+            Console.WriteLine(c > b && c > a);
+            Console.WriteLine(c > b && c == a);
+            Console.WriteLine(c > b || c == a);
+
+            //This is possible but it is poor coding because it is confusing instead of a double negative you should use a positive to get the same result
+            Console.WriteLine(!(c > b || c == a));
 
 
-           
+
+
 
         }
     }
