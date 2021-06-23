@@ -1,4 +1,5 @@
 ﻿using System;
+using HelloWorldBasicCSharpReview.Math;
 
 
 namespace HelloWorldBasicCSharpReview
@@ -87,7 +88,7 @@ namespace HelloWorldBasicCSharpReview
 
              }
             */
-
+            /*
             var a = 1;
             var b = 2;
             var c = 3;
@@ -118,8 +119,17 @@ namespace HelloWorldBasicCSharpReview
 
             //This is possible but it is poor coding because it is confusing instead of a double negative you should use a positive to get the same result
             Console.WriteLine(!(c > b || c == a));
+            */
 
 
+            var mike = new Person();
+            mike.FirstName = "Mike";
+            mike.LastName = "Falk";
+            mike.Introduce();
+
+            var calculator = new Calculator();
+            var result = calculator.Add(1, 2);
+            Console.WriteLine(result);
 
 
 
