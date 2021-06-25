@@ -129,7 +129,57 @@ namespace HelloWorldBasicCSharpReview
 
             var calculator = new Calculator();
             var result = calculator.Add(1, 2);
-            Console.WriteLine(result);
+            Console.WriteLine("This is the result of the calculator.Add method: " + result );
+
+            Console.WriteLine();
+            Console.WriteLine("This is the section on arrays: ");
+            Console.WriteLine();
+            var numbers = new int[3];
+            numbers[0] = 1;
+            Console.WriteLine(numbers[0]);
+            Console.WriteLine(numbers[1]);
+            Console.WriteLine(numbers[2]);
+            Console.WriteLine();
+            var flags = new bool[3];
+            flags[0] = true;
+            Console.WriteLine("This is what the bool array looks like: ");
+            Console.WriteLine();
+            Console.WriteLine(flags[0]);
+            Console.WriteLine(flags[1]);
+            Console.WriteLine(flags[2]);
+
+            //This is an example of an array created with the object initialization syntax. 
+            var names = new string[3] { "jack", "john", "mary" };
+            Console.WriteLine(names[0]);
+            Console.WriteLine(names[1]);
+            Console.WriteLine(names[2]);
+
+            Console.WriteLine();
+            Console.WriteLine("This is the section for the strings demo");
+            Console.WriteLine();
+
+            var realFirstName = "Mike";
+            var realLastName = "Falk";
+            var myName = "Mikey";
+
+            var fullName = realFirstName + " " + realLastName;
+
+            var myFullName = string.Format("My name is {0} {1}", realFirstName, realLastName);
+
+            var realNames = new string[3] { "john", "jack", "mary" };
+            var formatNames = string.Join(",", names);
+            Console.WriteLine(formatNames);
+
+
+            // This is an example of a verbatim string
+
+            var text = @"Hi John
+Look into the following paths
+c:\\folder1\\folder2
+c:\\folder3\\folder4";
+            Console.WriteLine(text);
+
+
 
 
 
