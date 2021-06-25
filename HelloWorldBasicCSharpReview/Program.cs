@@ -179,9 +179,19 @@ c:\\folder1\\folder2
 c:\\folder3\\folder4";
             Console.WriteLine(text);
 
+            Console.WriteLine();
+            var method = ShippingMethod.Express;
+            Console.WriteLine(method);
+            Console.WriteLine((int)method);
 
+            var methodId = 2;
+            Console.WriteLine((ShippingMethod)methodId);
 
+            Console.WriteLine(method.ToString());
 
+            var methodName = "Express";
+
+            var shippingMethod = (ShippingMethod)Enum.Parse(typeof(ShippingMethod), methodName);
 
         }
     }
