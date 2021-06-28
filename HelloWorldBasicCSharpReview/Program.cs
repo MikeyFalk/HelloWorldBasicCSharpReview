@@ -1,5 +1,6 @@
 ﻿using System;
 using HelloWorldBasicCSharpReview.Math;
+using HelloWorldBasicCSharpReview;
 
 
 namespace HelloWorldBasicCSharpReview
@@ -192,6 +193,49 @@ c:\\folder3\\folder4";
             var methodName = "Express";
 
             var shippingMethod = (ShippingMethod)Enum.Parse(typeof(ShippingMethod), methodName);
+
+            Console.WriteLine();
+            Console.WriteLine();
+
+            var a = 10;
+            var b = a;
+            b++;
+            Console.WriteLine("This is a: "+ a);
+            Console.WriteLine("This is b:"+ b);
+            Console.WriteLine(string.Format("a: {0}, b: {1}", a, b ));
+
+            var array1 = new int[3] { 1, 2, 3 };
+            var array2 = array1;
+            array2[0] = 0;
+
+            Console.WriteLine(string.Format("array[0]: {0}, array2[0]; {1}", array1[0], array2[0]));
+
+            Console.WriteLine();
+            Console.WriteLine();
+
+            
+            var number = 1;
+            
+            Increment(number);
+            //This is a value type the value of number is not affected  by the increment method. 
+            //Then Increment method creates a different value also called number adds 10 and immediately destroys it
+
+            Console.WriteLine(number);
+            
+            // This is a reference type the person object is referencing the same person parameter in the MakeOld method
+            var person = new Person() { Age = 20 };
+            MakeOld(person);
+            Console.WriteLine(person.Age);
+            
+
+        }
+        public static void Increment(int number)
+        {
+            number += 10;
+        }
+        public static void MakeOld(Person person)
+        {
+            person.Age += 10;
 
         }
     }
